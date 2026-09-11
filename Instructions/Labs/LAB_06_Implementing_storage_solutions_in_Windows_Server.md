@@ -1,7 +1,5 @@
 # Lab 06: Implementing storage solutions in Windows Server
 
-## Estimated time: 90 Minutes
-
 ## Lab scenario
 
 At Contoso, Ltd., you need to implement the Storage Spaces feature on the Windows Server servers to simplify storage access and provide redundancy at the storage level. Management wants you to test Data Deduplication to save storage. They also want you to implement Internet Small Computer System Interface (iSCSI) storage to provide a simpler solution for deploying storage in the organization. Additionally, the organization is exploring options for making storage highly available and researching the requirements that it must meet for high availability. You want to test the feasibility of using highly available storage, specifically Storage Spaces Direct.
@@ -14,6 +12,8 @@ In this lab, you will perform:
 - **Exercise 2:** Configure iSCSI storage.
 - **Exercise 3:** Configure Storage Spaces.
 - **Exercise 4:** Implement Storage Spaces Direct.
+
+## Estimated time: 90 Minutes
 
 ## Architecture Diagram
 
@@ -110,14 +110,18 @@ While performing the lab, when pasting commands, please use **Shift + Insert** t
 
 2. At the **Windows PowerShell** prompt, enter the following commands, and press Enter after each to create a new drive formatted with ReFS:
 
-   ### 1. List all available disks  
+   ### 1. List all available disks 
+
    ```powershell
    Get-Disk
    ```	
-   ### 2. Initialize the disk (replace `1` with the correct disk number)  
+
+   ### 2. Initialize the disk (replace `1` with the correct disk number)
+
    ```powershell
    Initialize-Disk -Number 1
    ```	
+
    ![](media/AZ-800-l9-5.png)
 
    ### 3. Create a new partition using the entire disk space and assign a drive letter (M)  
@@ -125,6 +129,7 @@ While performing the lab, when pasting commands, please use **Shift + Insert** t
    ```powershell
    New-Partition -DiskNumber 1 -UseMaximumSize -DriveLetter M
    ```	
+
    ![](media/lab09-17-3.png)
 
    ### 4. Format the partition with the ReFS file system  
@@ -132,6 +137,7 @@ While performing the lab, when pasting commands, please use **Shift + Insert** t
    ```powershell
    Format-Volume -DriveLetter M -FileSystem ReFS
    ```
+
    ![](media/lab09-17-4.png)
 
 3. At the **Windows PowerShell** prompt, enter the following commands, and press Enter after each to copy from **SEA-ADM1** a script that creates sample files to be deduplicated, execute it, and identify the outcome:
@@ -145,6 +151,7 @@ While performing the lab, when pasting commands, please use **Shift + Insert** t
    ```powershell
    New-PSDrive -Name 'X' -PSProvider FileSystem -Root '\\SEA-ADM1\Labfiles'
    ```
+
    ![](media/lab09-19-1.png)
 
    ### 2. Create a directory `M:\Data`
@@ -156,9 +163,11 @@ While performing the lab, when pasting commands, please use **Shift + Insert** t
    ![](media/AZ-800-l9-6.png)
 
    ### 3. Copy `CreateLabFiles.cmd` from the network drive to `M:\Data`
+
    ```powershell
    Copy-Item -Path X:\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab09\CreateLabFiles.cmd -Destination M:\Data\ -PassThru
    ```
+
    ![](media/AZ-800-l9-7.png)
 
    ### 4. Execute the copied script
@@ -170,19 +179,25 @@ While performing the lab, when pasting commands, please use **Shift + Insert** t
    ![](media/lab09-19-4.png)
 
    ### 5. Change the working directory to `M:\Data`
+
    ```powershell
    Set-Location -Path M:\Data
    ```
+
    ### 6. List the contents of `M:\Data`
+
    ```powershell
    Get-ChildItem -Path .
    ```
+
    ![](media/AZ-800-l9-8.png)
 
    ### 7. Verify the `M:` drive details
+
    ```powershell
    Get-PSDrive -Name M
    ```
+
    ![](media/AZ-800-l9-9.png)
 
    > **Note**: Record the free space on drive **M**. 
@@ -191,17 +206,17 @@ While performing the lab, when pasting commands, please use **Shift + Insert** t
 
 1. Switch back to the console session to **SEA-ADM1**, and then, within the console session, switch to **Server Manager**.
 
-   > **Note:** Minimize the current VM window, then select **SEA-ADM1** from the taskbar and if vm is off please click on start.
+   > **Note:** Minimize the current VM window, then select **SEA-ADM1** from the taskbar and if VM is off please click on start.
 
    - If you are unable to login to **SEA-ADM1** and it shows **press Ctrl+Alt+Delete to unlock (1)** then go to **Actions (2)** tab and select **Ctrl+Alt+Delete (3)** option.
 
       ![](media/start-vm.png)
 
-   - If prompted to sign in as **CONTOSO\Administrator** then add passowrd - **Pa55w.rd** **(1)** and click arrow icon **->** **(2)** to Enter.
+   - If prompted to sign in as **CONTOSO\Administrator** then add password - **Pa55w.rd** **(1)** and click arrow icon **->** **(2)** to Enter.
 
       ![](media/sigin-user.png)
 
-   - You will be in **SEA-ADM1** **(1)** vm and click on **Maximize (2)** option to see the taskbar and windows icon at bottom to work.
+   - You will be in **SEA-ADM1** **(1)** VM and click on **Maximize (2)** option to see the taskbar and windows icon at bottom to work.
 
       ![](media/maximize.png)
 
@@ -215,7 +230,7 @@ While performing the lab, when pasting commands, please use **Shift + Insert** t
 
 1. In the **Disks (1)** pane, browse to the list of disks of **SEA-SVR3** and select the entry representing the disk number **1** **(2)**, which you configured in the previous task.
 
-1. In the **Volumes** pane, display the context-sensitive menu of the **M:** volume, and by right clicking on **M: (3)** volume ,select **Configure Data Deduplication (4)**.
+1. In the **Volumes** pane, display the context-sensitive menu of the **M:** volume, and by right-clicking on **M: (3)** volume ,select **Configure Data Deduplication (4)**.
 
     ![](media/AZ-800-l9-11.png)
 
@@ -294,6 +309,7 @@ While performing the lab, when pasting commands, please use **Shift + Insert** t
    ```powershell
    Start-DedupJob -Volume M: -Type Optimization –Memory 50
    ```
+
    ![](media/lab9-12-2.png)
 
 1. Switch back to the console session to **SEA-SVR3**.
@@ -549,6 +565,7 @@ using the following settings:
    ```powershell
    Get-Disk
    ```
+
    ![](media/AZ-800-l9-23.png)
 
    > **Note**: Both disks are present and healthy, but offline. To use them, you need to initialize and format them.
@@ -593,6 +610,7 @@ using the following settings:
    for ($num = 1;$num -le 4; $num++) {Clear-Disk -Number $num -RemoveData -RemoveOEM -ErrorAction SilentlyContinue}
    for ($num = 1;$num -le 4; $num++) {Set-Disk -Number $num -IsOffline $true}
    ```
+
    ![](media/enter-y-loop.png)
 
    > **Note**: This is necessary in order to prepare for the next exercise.
@@ -611,7 +629,7 @@ using the following settings:
 
     ![](media/AZ-800-l9-26.png)
 
-1. Select each of the four disks in sequence, display its context-sensitive menu by right clicking on disk **(1)** and select the **Bring Online (2)** option in the menu, and then in the **Bring Disk Online** window, select **Yes**.
+1. Select each of the four disks in sequence, display its context-sensitive menu by right-clicking on disk **(1)** and select the **Bring Online (2)** option in the menu, and then in the **Bring Disk Online** window, select **Yes**.
 
     ![](media/AZ-800-l9-27.png)
 
@@ -633,7 +651,7 @@ using the following settings:
 
    ![](media/AZ-800-l9-35.png)
 
-1. On the **Select physical disks for the storage pool** page, select the check boxes next to the three disks of **127 GB (1)** size, and then select **Next (2)**.
+1. On the **Select physical disks for the storage pool** page, select the check-boxes next to the three disks of **127 GB (1)** size, and then select **Next (2)**.
 
    ![](media/AZ-800-l9-36.png)
 
@@ -790,7 +808,7 @@ using the following settings:
 
    ![](media/add-pd01.png)
 
-1. In the **Add Physical Disk** window, in the row representing the fourth disk to be added to the pool, select the check box next to the disk name. In the **Allocation** drop-down list, ensure that the **Automatic (1)** entry is selected, and then select **OK (2)**.
+1. In the **Add Physical Disk** window, in the row representing the fourth disk to be added to the pool, select the checkbox next to the disk name. In the **Allocation** drop-down list, ensure that the **Automatic (1)** entry is selected, and then select **OK (2)**.
 
    ![](media/add-pdisk01.png)
 
@@ -810,6 +828,7 @@ using the following settings:
    for ($num = 1;$num -le 4; $num++) {Clear-Disk -Number $num -RemoveData -RemoveOEM -ErrorAction SilentlyContinue}
    for ($num = 1;$num -le 4; $num++) {Set-Disk -Number $num -IsOffline $true}
    ```
+
    ![](media/remove-disk-loop.png)
 
    > **Note**: This is necessary in order to prepare for the next exercise.
@@ -1043,14 +1062,15 @@ using the following settings:
 
 1. Refresh the browser page displaying Windows Admin Center and verify that all servers are healthy.
 
-
-
 ## Summary
 
 In this lab, you have completed:
+
 - Tested the implementation of Data Deduplication
 - Installed and configured iSCSI storage
 - Configured redundant Storage Spaces
 - Tested the implementation of Storage Spaces Direct
 
 ## You have successfully completed this lab.
+
+### Happy Learning!!

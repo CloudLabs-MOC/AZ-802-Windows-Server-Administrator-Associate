@@ -8,11 +8,11 @@ In this hands-on-lab, you will implement key security features in Windows Server
 
 In this lab, you'll be working on:
 
-- Exercise 1: Configuring Windows Defender Credential Guard.
-- Exercise 2: Locating problematic accounts.
-- Exercise 3: Implementing Local Administrator Password Solution (LAPS)
+- **Exercise 1:** Configuring Windows Defender Credential Guard.
+- **Exercise 2:** Locating problematic accounts.
+- **Exercise 3:** Implementing Local Administrator Password Solution (LAPS)
   
-## Estimated timing: 1 hr 45 Minutes
+## Estimated time: 1 hr 45 Minutes
 
 ## Architecture diagram
 
@@ -116,6 +116,7 @@ In this task, you will identify Active Directory domain accounts with non-expiri
    ![](./Media/lab1-image18.png)
 
 1. Review the list of user accounts returned.
+
 1. To enable password expiration for all user accounts in the result set, at the Windows PowerShell command prompt, enter the following command and press Enter:
 
    ```powershell
@@ -321,9 +322,13 @@ In this task, you will verify that LAPS is correctly implemented by retrieving a
 
    > **Note:** The value of the password is, in this case, enclosed in a pair of braces.
 
-### Review
+### Summary
+
 In this lab, you have completed:
+
 - Configured Windows Defender Credential Guard.
 - Implemented LAPS.
 
 ### You have successfully completed the lab
+
+### Happy Learning!!

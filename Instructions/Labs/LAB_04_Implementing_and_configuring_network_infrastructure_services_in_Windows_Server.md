@@ -2,9 +2,8 @@
 
 ## Lab scenario
 
-Contoso, Ltd. is a large organization with complex requirements for network services. To help meet these requirements, you will deploy and configure DHCP so that it is highly available to ensure service availability. You will also set up DNS so that Trey Research, a department within Contoso, can have its own DNS server in the testing area. Finally, you will provide remote access to Windows Admin Center and secure it with Web Application Proxy.
+Contoso, Ltd. is a large organization with complex requirements for network services. To help meet these requirements, you will deploy and configure DHCP so that it is highly available to ensure service availability. You will also set up DNS so that Trey Research, a department within contoso, can have its own DNS server in the testing area. Finally, you will provide remote access to Windows Admin Center and secure it with Web Application Proxy.
  
-
 ## Lab objectives
 
 In this lab, you will perform:
@@ -23,8 +22,6 @@ In this lab, you will perform:
    - **DHCP for Exercise 1**, which provides centralized IP address assignment and lease management for client devices.
 
    - **DNS for Exercise 2**, which provides name resolution so users and services can locate network resources by name.
-
-
 
 > **Note**: While performing the lab, when pasting commands, please use **Shift + Insert** to paste them into the Command Prompt in the upcoming steps.
 
@@ -71,7 +68,7 @@ In this lab, you will perform:
 
    ![](media/all-conn.png)
 
-1. In the All connections pane, select **+ Add (1)**.
+1. In all connections pane, select **+ Add (1)**.
 
    ![](media/lab7-173.png)
 
@@ -84,6 +81,7 @@ In this lab, you will perform:
    > **Note**: While performing step 6, if you see an error message stating, **"You can add this server to your list of connections, but we can't confirm it's available."**, select **Add**.  
 
 1. In the **All Connections** pane, select **sea-svr6.contoso.com** **(1)** and then click on **Manage as** **(2)**.  
+
    - In the **Specify your credentials** dialog box:  
      - Ensure that **Use another account for this connection** **(3)** is selected.  
      - Enter the Administrator credentials:  
@@ -267,7 +265,8 @@ In this lab, you will perform:
 
     ![](media/AZ-800-l7-18.png)
 
-    >**Note** If you can't go to next step then click on **Cancel** and you will be in step -  12 again. There select **refresh (2)** option from **More actions (1)**. Then start from step - 12.
+    >**Note** If you can't go to next step then click on **Cancel** and you will be in step - 12 again. There select **refresh (2)** option from **More actions (1)**. Then start from step - 12.
+    >
     > ![](media/refresh.png)
 
 1. On the **Select from failover relationships which are already configured on this server** screen, select **Next**, and then select **Finish**.
@@ -402,7 +401,7 @@ In this lab, you will perform:
 
    ![](media/dns-notification.png)
 
-   >**Note**: If prompted **DNS powershell tools are  not installed** , click on **install**.
+   >**Note**: If prompted **DNS powershell tools are not installed**, click on **install**.
 
 ### Task 2: Create a DNS zone
 
@@ -512,16 +511,19 @@ In this lab, you will perform:
    ```powershell
    Add-DnsServerClientSubnet -Name "HeadOfficeSubnet" -IPv4Subnet '172.16.10.0/24'
    ```
+
 1. Enter the following command, and then press Enter to create a zone scope for head office:
 
    ```powershell
    Add-DnsServerZoneScope -ZoneName 'TreyResearch.net' -Name 'HeadOfficeScope'
    ```
+
 1. Enter the following command, and then press Enter to add a new resource record for the head office scope:
 
    ```powershell
    Add-DnsServerResourceRecord -ZoneName 'TreyResearch.net' -A -Name 'testapp' -IPv4Address '172.30.99.100' -ZoneScope 'HeadOfficeScope'
    ```
+
 1. Enter the following command, and then press Enter to create a new policy that links the head office subnet and the zone scope:
 
    ```powershell
@@ -543,6 +545,7 @@ In this lab, you will perform:
    ```powershell
    Resolve-DnsName -Server sea-svr6.contoso.com -Name testapp.treyresearch.net
    ```
+
    > **Note**: Verify that the name resolves to the IP address **172.30.99.100** that was configured in the **HeadOfficePolicy**.
 
    ![](media/lab7-12-10.png)
@@ -566,6 +569,7 @@ In this lab, you will perform:
    ```powershell
    Resolve-DnsName -Server sea-svr6.contoso.com -Name testapp.treyresearch.net
    ```
+
    ![](media/lab7-12-11.png)
 
    > **Note**: Verify that the name resolves to **172.30.99.234**. This is expected, because the IP address of **SEA-ADM1** is no longer within the **HeadOfficeSubnet**. DNS queries originating from the **HeadOfficeSubnet** of **(172.16.10.0/24)** targeting `testapp.treyresearch.net` resolve to **172.30.99.100**. DNS queries from outside of this subnet targeting `testapp.treyresearch.net` resolve to **172.30.99.234**.
@@ -587,7 +591,9 @@ In this lab, you will perform:
 1. Close all open windows.
 
 ### Summary
+
 In this lab, you have completed:
+
 - Install the DHCP role and authorize the DHCP server
 - Create a scope
 - Configure DHCP Failover and verify DHCP functionality

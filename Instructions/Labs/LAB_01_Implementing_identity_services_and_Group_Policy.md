@@ -104,8 +104,7 @@ In this task, you will configure the SEA-SVR1 server to be promoted to a domain 
 
       ![](media/AZ-800-l1-1.png)
 
-   
-1. continue where you left. In **Server Manager**, select **All Servers (1)** and check the **SEA-SVR1 (2)** has IP, Online On the **Manage (3)** menu, select **Add Servers (4)**.  
+1. Continue where you left. In **Server Manager**, select **All Servers (1)** and check the **SEA-SVR1 (2)** has IP, Online On the **Manage (3)** menu, select **Add Servers (4)**.  
 
    ![](media/servers-all.png)
 
@@ -226,6 +225,7 @@ In this task, you will create an Organizational Unit (OU) called Seattle, create
    ```powershell
    New-ADOrganizationalUnit -Name "Seattle" -Path "DC=contoso,DC=com" -ProtectedFromAccidentalDeletion $true -Server SEA-DC1.contoso.com
    ```
+
    ![](media/t3-cmd1.png)
 
 1. To create a user account for **Ty Carlson** in the **Seattle** OU, enter the following command, and then press Enter:
@@ -233,6 +233,7 @@ In this task, you will create an Organizational Unit (OU) called Seattle, create
    ```powershell
    New-ADUser -Name Ty -DisplayName 'Ty Carlson' -GivenName Ty -Surname Carlson -Path 'OU=Seattle,DC=contoso,DC=com'
    ```
+
    ![](media/t3-cmd2.png)
 
 1. To set the password for the Ty's user account, enter the following command, and then press Enter:
@@ -240,6 +241,7 @@ In this task, you will create an Organizational Unit (OU) called Seattle, create
    ```powershell
    Set-ADAccountPassword Ty
    ```
+
    ![](media/t3-cmd3.png)
 
 1. When you receive a prompt for the **current password**, press **Enter**.
@@ -258,11 +260,12 @@ In this task, you will create an Organizational Unit (OU) called Seattle, create
 
    ![](media/t3-cmd-enable.png)
 
-1. To create a domain global group named **SeattleBranchUsers**, enter the following command, and then press Enter and wait for 1 minute it creates group and no output will dispaly just continue with next command.
+1. To create a domain global group named **SeattleBranchUsers**, enter the following command, and then press Enter and wait for 1 minute it creates group and no output will display just continue with next command.
 
    ```powershell
    New-ADGroup SeattleBranchUsers -Path 'OU=Seattle,DC=contoso,DC=com' -GroupScope Global -GroupCategory Security
    ```
+
    ![](media/t3-cmd-settle.png)
 
 1. To add the **Ty** user account to the newly created group, enter the following command, and then press Enter:
@@ -270,6 +273,7 @@ In this task, you will create an Organizational Unit (OU) called Seattle, create
    ```powershell
    Add-ADGroupMember -Identity SeattleBranchUsers -Members Ty
    ```
+
    ![](media/t3-cmd-ty.png)
 
 1. To confirm that the user is in the group, enter the following command, and then press Enter:
@@ -389,13 +393,13 @@ In this task, you will review the applied Group Policy settings on a client mach
 
     ![](media/AZ-800-l1-37.png)
 
-1. On the login screen, select **Other user (1)**. Enter **CONTOSO\\Ty (2)** as the username and the provided password  **Pa55w.rd(3)**.  
+1. On the login screen, select **Other user (1)**. Enter **CONTOSO\\Ty (2)** as the username and the provided password **Pa55w.rd(3)**.  
 
-    > **Note** When signing out if it dispalys closing apps pop-up  then select **Sign out anyway** option.
+    > **Note** When signing out if it displays closing apps pop-up then select **Sign out anyway** option.
 
     ![](media/AZ-800-l1-38.png)
 
-   > **Note:** while logging into the Hyper-V virtual machines, if a message appears stating **"Press Ctrl+Alt+Delete to unlock"**, navigate to the **Actions** menu in the Virtual Machine Connection window and select the **Ctrl+Alt+Delete** option, as shown in the image below and you will find the Other User option to Sign in
+   > **Note:** while logging into the Hyper-V virtual machines, if a message appears stating **"Press Ctrl+Alt+Delete to unlock"**, navigate to the **Actions** menu in the Virtual Machine Connection window and select the **Ctrl+Alt+Delete** option, as shown in the image below, you will find the Other User option to Sign in.
    
     ![Manage Your Virtual Machine](media/lab1-12-9.png)
 
@@ -431,7 +435,7 @@ In this task, you will review the applied Group Policy settings on a client mach
 
    ![](media/AZ-800-l1-44.png)
 
-    > **Note:** while logging into the Hyper-V virtual machines, if a message appears stating **"Press Ctrl+Alt+Delete to unlock"**, navigate to the **Actions** menu in the Virtual Machine Connection window and select the **Ctrl+Alt+Delete** option, as shown in the image below and you will find the Other User option to Sign in
+    > **Note:** while logging into the Hyper-V virtual machines, if a message appears stating **"Press Ctrl+Alt+Delete to unlock"**, navigate to the **Actions** menu in the Virtual Machine Connection window and select the **Ctrl+Alt+Delete** option, as shown in the image below and you will find the Other User option to Sign in.
    
     ![Manage Your Virtual Machine](media/lab1-12-9.png)
 

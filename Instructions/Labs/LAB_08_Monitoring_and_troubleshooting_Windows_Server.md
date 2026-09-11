@@ -5,13 +5,14 @@
 In this hands-on lab, you will learn to monitor and troubleshoot the performance of a Windows Server. You will establish a performance baseline by creating data collector sets and analyzing key system metrics. You will also simulate performance issues to identify the source of problems and use Performance Monitor to capture and analyze performance data. Lastly, you will configure centralized event logs to gather system and application events from remote servers, enabling effective monitoring and troubleshooting across your environment.
 
 ## Lab Objectives
+
 In this lab, you will complete the following tasks:
 
-+ Exercise 1: Establishing a performance baseline
-+ Exercise 2: Identifying the source of a performance problem
-+ Exercise 3: Viewing and configuring centralized event logs
+- **Exercise 1:** Establishing a performance baseline
+- **Exercise 2:** Identifying the source of a performance problem
+- **Exercise 3:** Viewing and configuring centralized event logs
   
-## Estimated timing: 75 Minutes
+## Estimated time: 75 Minutes
 
 ## Architecture diagram
 
@@ -291,7 +292,7 @@ In this task, you will be configuring the prerequisites for event log forwarding
 
    ![](./media/azm8-8.png)
 
-1. To establish a PowerShell Remoting session to **SEA-DC1**, enter the following command and press Enter:
+1. To establish a PowerShell remoting session to **SEA-DC1**, enter the following command and press Enter:
 
    ```powershell
    Enter-PSSession -ComputerName SEA-DC1.contoso.com
@@ -351,7 +352,7 @@ In this task, you will be configuring the prerequisites for event log forwarding
 
 ### Task 2: Create a subscription and verify the results
 
-In this task, you will create an event subscription to collect and forward critical events from SEA-DC1 to SEA-SVR2. After setting up the subscription, you will verify that the forwarded events appear in Event Viewer, ensuring centralized logging is working correctl
+In this task, you will create an event subscription to collect and forward critical events from SEA-DC1 to SEA-SVR2. After setting up the subscription, you will verify that the forwarded events appear in Event Viewer, ensuring centralized logging is working correctly.
 
 1. On **SEA-SVR2**, in the **Type here to search** text box next to the **Start** button, enter **Event Viewer (1)**, and then, in the **Best match** list, select **Event Viewer (2)**.
 
@@ -367,7 +368,7 @@ In this task, you will create an event subscription to collect and forward criti
 
 1. In the **Subscription Properties** dialog box, enter **SEA-DC1 Events (1)** in the **Subscription name** box.
 
-1. Ensure that the **Collector initiated (2)** option is selected, and then select **Select Computers (3)**.
+1. Ensure that the **Collector initiated (2)** option is selected, and then click on **Select Computers (3)**.
 
     ![](./media/az-8-16.png)
 
@@ -383,7 +384,7 @@ In this task, you will create an event subscription to collect and forward criti
 
     ![](./Media/az-801-lab8-image42.png)
    
-1. In the **Subscription Properties – SEA-DC1 Events** dialog box, select **Select Events**.
+1. In the **Subscription Properties – SEA-DC1 Events** dialog box, click on **Select Events**.
 
    ![](./Media/az-801-lab8-image43.png)
 
@@ -409,14 +410,16 @@ In this task, you will create an event subscription to collect and forward criti
 
    ![](./Media/az-801-lab8-image46.png)
 
-   >**Note:** You have to wait for sometime, till the results shows.
+   >**Note:** You have to wait for some time, till the results shows.
 
-### Review
+### Summary
 
 In this lab, you have completed:
 
 - Established a performance baseline.
 - Identified the source of a performance problem.
-- Viewied and configured centralized event logs.
+- Viewed and configured centralized event logs.
 
 ### You have successfully completed the lab
+
+### Happy Learning!!

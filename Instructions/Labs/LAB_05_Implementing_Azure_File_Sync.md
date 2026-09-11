@@ -54,6 +54,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
    ```powershell
    Install-WindowsFeature -Name RSAT-DFS-Mgmt-Con -IncludeManagementTools
    ```
+
     ![](./media/AZ-800-l10-1.png)
 
 1. On the taskbar, select **File Explorer**.
@@ -193,7 +194,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
     ![](./media/AZ-800-l10-20.png)
 
-1. select **Show Script**, use the **Copy to clipboard** button to copy the script, and then close the **Connect** tab.
+1. Select **Show Script**, use the **Copy to clipboard** button to copy the script, and then close the **Connect** tab.
 
     ![](./media/AZ-800-l10-21.png)
 
@@ -267,8 +268,6 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
     ![](./media/new4.png)
 
-    <validation step="f75e9fe1-a77f-4ece-b64e-f02e20b24fde" />
-
 ## Exercise 3: Replacing DFS Replication with File Sync-based replication
 
 ### Task 1: Add SEA-SVR1 as a server endpoint
@@ -287,7 +286,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
 1. Use File Explorer to copy the downloaded file to the **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10** folder.
    
-   >**Note:** If you cannot copy StorageSyncAgent_WS2025.msi from the Downloads folder to C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10, please follow these steps:
+   >**Note:** If you cannot copy StorageSyncAgent_WS2025.msi from the Downloads folder to **C:\Labfiles\AZ-800-Administering-Windows-Server-Hybrid-Core-Infrastructure-master\Allfiles\Labfiles\Lab10**, please follow these steps:
     > 
     >  1. Open two File Explorer windows.
     >
@@ -338,7 +337,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
   "To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code."
   you should ignore the first 2 characters of the code and enter only the next 9 characters.
 
-     >**Note**:For example, if the code displayed is **4mAQ843GPMH**, you should enter **AQ843GPMH**. copy the nine-character code to the Clipboard.
+     >**Note**:For example, if the code displayed is **4mAQ843GPMH**, you should enter **AQ843GPMH**. Copy the nine-character code to the Clipboard.
 
     ![](./media/poss.png)
 
@@ -375,6 +374,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
     ![](./media/AZ-800-l10-40.png)
 
    >**Note:** if you not able to see **File1.txt**, kindly close and open **File Explorer** window, browse for **\\\\SEA-SVR1\\Data** folder in **Quick access**.
+
    >**Note:** You uploaded **File1.txt** to the Azure file share, from where it was synced to **SEA-SVR1** by File Sync.
 
 ### Task 2: Register SEA-SVR2 with File Sync
@@ -392,6 +392,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
     >    ![](./media/AZ-800-l10-script-error.png) 
 
 1. After running the script, you will see a warning message. At the last line, you'll find a prompt saying:
+
    "To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code."
    you should ignore the first 2 characters of the code and enter only the next 9 characters.
 
@@ -476,6 +477,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
    Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
    Invoke-StorageSyncCloudTiering -Path S:\Data 
    ```
+
 1. On **SEA-ADM1**, switch to the File Explorer window displaying the content of the `\\SEA-SVR2\Data` folder.
 
       ![](./media/AZ-800-l10-47.png)
@@ -536,8 +538,10 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 
    >**Note:** You might need to wait a few minutes for the sync conflict to occur.
 
-### Review
+### Summary
+
 In this lab, you have completed:
+
 - Deployed and tested DFS deployments.
 - Created and used an Azure file share.
 - Deployed Storage Sync Service and a File Sync group.
@@ -547,3 +551,5 @@ In this lab, you have completed:
 - Monitored File Sync replication and test replication conflict resolution.
 
 ### You have successfully completed the lab
+
+### Happy Learning!!

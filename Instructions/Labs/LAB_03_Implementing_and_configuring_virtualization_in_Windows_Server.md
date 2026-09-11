@@ -4,9 +4,9 @@ In this Hands-On-Lab, you will learn how to implement and configure virtualizati
 
 ## Lab scenario
 
-Contoso is a global engineering and manufacturing company with its head office in Seattle, USA. An IT office and data center are in Seattle to support the Seattle location and other locations. Contoso recently deployed a Windows Server server and client infrastructure. 
+Contoso is a global engineering and manufacturing company with its head office in Seattle, USA. An IT office and data center are in Seattle to support the Seattle location and other locations. Contoso recently deployed a Windows Server and client infrastructure. 
 
-Because of many physical servers being currently underutilized, the company plans to expand virtualization to optimize the environment. Because of this, you decide to perform a proof of concept to validate how Hyper-V can be used to manage a virtual machine environment. Also, the Contoso DevOps team wants to explore container technology to determine whether they can help reduce deployment times for new applications and to simplify moving applications to the cloud. You plan to work with the team to evaluate Windows Server containers and to consider providing Internet Information Services (Web services) in a container.
+Because of many physical servers being currently underutilized, the company plans to expand virtualization to optimize the environment. Because of this, you decide to perform a proof of concept to validate how Hyper-V can be used to manage a virtual machine environment. Also, the contoso DevOps team wants to explore container technology to determine whether they can help reduce deployment times for new applications and to simplify moving applications to the cloud. You plan to work with the team to evaluate Windows Server containers and to consider providing Internet Information Services (Web services) in a container.
 
 ## Lab objectives
 
@@ -21,13 +21,15 @@ In this lab, you will perform:
 
    ![](media/mod5art.png)  
 
->Note :
+>**Note:**
 >While performing the lab, when pasting commands, please use **Shift + Insert** to paste them into the Command Prompt in the upcoming steps.
 
 ## Exercise 1: Creating and configuring VMs
+
 In this exercise, you will install and configure the Hyper-V role on a Windows Server. You will ensure that the required hardware and software prerequisites are met and verify that Hyper-V is running correctly.
 
 ### Task 1: Create a Hyper-V virtual switch
+
 In this task, you will install the Hyper-V role on a Windows Server machine using Server Manager and PowerShell.
 
 1. On the **HOSTVM dropdown menu (1)**, select **SEA-ADM1 (2)** to connect to the administrator VM.  
@@ -68,6 +70,7 @@ In this task, you will install the Hyper-V role on a Windows Server machine usin
       ![](media/lab5h4.png) 
 
 ### Task 2: Create a virtual hard disk
+
 In this task, you will configure essential Hyper-V settings, including virtual switch configuration, VM storage locations, and resource allocation.
 
 1. On **SEA-ADM1**, in Hyper-V Manager connected to **SEA-SVR1**, under **Action (1)** pane, select **New (2)**, and then select **Hard Disk (3)**. The **New Virtual Hard Disk Wizard** starts.
@@ -102,9 +105,10 @@ In this task, you will configure essential Hyper-V settings, including virtual s
    ![](media/AZ-800-l5-5.png) 
 
 ### Task 3: Create a virtual machine
+
 In this task, you will create a new virtual machine using Hyper-V Manager and PowerShell, selecting appropriate hardware and storage configurations.
 
-1. On **SEA-ADM1**, in Hyper-V Manager,under **Action (1)** pane, select **New (2)**, and then select **Virtual Machine (3)**. The **New Virtual Machine Wizard** starts.
+1. On **SEA-ADM1**, in Hyper-V Manager, under **Action (1)** pane, select **New (2)**, and then select **Virtual Machine (3)**. The **New Virtual Machine Wizard** starts.
 
    ![](media/AZ-800-l5-6.png)
 
@@ -112,7 +116,7 @@ In this task, you will create a new virtual machine using Hyper-V Manager and Po
 
    ![](media/lab5-task3-2.png)
 
-1. On the **Specify Name and Location** page, enter **SEA-VM1 (1)**, and then select the check box next to **Store the virtual machine in a different location (2)**.
+1. On the **Specify Name and Location** page, enter **SEA-VM1 (1)**, and then select the checkbox next to **Store the virtual machine in a different location (2)**.
 
 1. In the **Location** box, enter **C:\Base (3)**, and then select **Next > (4)**.
 
@@ -154,7 +158,7 @@ In this task, you will create a new virtual machine using Hyper-V Manager and Po
 
    ![](media/lab5-task3-12.png)
 
-1. In the **Dynamic Memory** section, select the check box next to **Enable Dynamic Memory (1)**. Next to **Maximum RAM**, enter **4096 (2)**, and then select **OK (3)**.
+1. In the **Dynamic Memory** section, select the checkbox next to **Enable Dynamic Memory (1)**. Next to **Maximum RAM**, enter **4096 (2)**, and then select **OK (3)**.
 
    ![](media/AZ-800-l5-10.png)
 
@@ -179,7 +183,7 @@ In this task, you will manage virtual machines using Windows Admin Center
 
       ![](media/AZ-800-l5-11.png)
 
-1. In the All connections pane, select **+ Add (1)**.
+1. In the all connections pane, select **+ Add (1)**.
 
    ![](media/lab7-173.png)
 
@@ -191,7 +195,8 @@ In this task, you will manage virtual machines using Windows Admin Center
 
    > **Note:** While performing above step, if you see an error message stating, **"You can add this server to your list of connections, but we can't confirm it's available."**, select **Add**.  
 
-   - In the **All Connections** pane, select **sea-svr1.contoso.com** **(1)** and then click on **Manage as** **(2)**.  
+   - In the **All Connections** pane, select **sea-svr1.contoso.com** **(1)** and then click on **Manage as** **(2)**.
+
    - In the **Specify your credentials** dialog box:  
      - Ensure that **Use another account for this connection** **(3)** is selected.  
      - Enter the Administrator credentials:  
@@ -232,7 +237,7 @@ In this task, you will manage virtual machines using Windows Admin Center
 
    ![](media/AZ-800-l5-13.png)
 
-1.  Select **SEA-VM1** and review its Properties pane.
+1. Select **SEA-VM1** and review its Properties pane.
 
     ![](media/lab5-task4-12.png)
 
@@ -244,7 +249,7 @@ In this task, you will manage virtual machines using Windows Admin Center
 
 1. Select **New Virtual Hard Disk (1)**.
 
-1. On the **New Virtual Hard Disk** pane,Change the disk type to **Fixed size (2)** and in the **Size (GB)** text box, type **5** **(3)** , leave other settings with their default values, and then select **Create (4)**.
+1. On the **New Virtual Hard Disk** pane, change the disk type to **Fixed size (2)** and in the **Size (GB)** text box, type **5** **(3)** , leave other settings with their default values, and then select **Create (4)**.
 
    ![](media/AZ-800-l5-14.png)
 
@@ -373,6 +378,7 @@ In this task, you will install and run windows container inside server machine.
    ```powershell
    docker exec nano1 hostname
    ```
+
     > **Note:** Verify this is the hostname of the container instance, not **SEA-SVR1**.
 
 1. Enter the following command, and then press Enter to create a text file in the container:
@@ -384,6 +390,7 @@ In this task, you will install and run windows container inside server machine.
     ![](media/lab5-12-8.png)
 
 1. Enter the following command to stop the running container and return to the PowerShell prompt on **SEA-SVR1**:
+
    ```powershell
    docker stop nano1
    ```
@@ -430,7 +437,7 @@ In this task, you will install and run windows container inside server machine.
     
     ![](media/lab5-12-11.png)
 
-    > **Note:** The original image was not modified by adding a file and reverted back to its original state after stopping.
+    > **Note:** The original image was not modified by adding a file and reverted to its original state after stopping.
 
 ### Task 3: Use Windows Admin Center to manage containers
 
@@ -446,7 +453,7 @@ In this task, you will use Windows Admin Center to manage containers.
 
     ![](media/lab5-12-14.png)
 
-1. On **SEA-ADM1**, in the Windows Admin Center, in the Tools menu of **sea-svr1.contoso.com**, select **Containers**. 
+1. On **SEA-ADM1**, in the Windows Admin Center, in the tools menu of **sea-svr1.contoso.com**, select **Containers**. 
 
    >**Note:** If prompted to close the **PowerShell** session, select **Continue**.
 
@@ -454,8 +461,10 @@ In this task, you will use Windows Admin Center to manage containers.
 
     ![](media/lab5-12-15n.png)
 
-### Review
+### Summary
+
 In this lab, you have completed:
+
 - Create a Hyper-V virtual switch
 - Create a virtual hard disk and virtual machine
 - Manage virtual machines using Windows Admin Center
@@ -463,3 +472,5 @@ In this lab, you have completed:
 - Use Windows Admin Center to manage containers
 
 ### You have successfully completed the lab
+
+### Happy Learning!!

@@ -5,13 +5,14 @@
 Contoso, Ltd. wants to implement several new servers in their environment, and they have decided to use Server Core. They also want to implement Windows Admin Center for remote management of both these servers and other servers in the organization.
 
 ## Lab Objective
+
 In this lab, you will perform:
 
-  - Task 1: Install Windows Admin Center
-  - Task 2: Add servers for remote administration
-  - Task 3: Configure Windows Admin Center extensions
-  - Task 4: Verify remote administration
-  - Task 5:Administer servers with Remote PowerShell
+- **Task 1:** Install Windows Admin Center
+- **Task 2:** Add servers for remote administration
+- **Task 3:** Configure Windows Admin Center extensions
+- **Task 4:** Verify remote administration
+- **Task 5:** Administer servers with Remote PowerShell
 
 ## Estimated time: 45 Minutes
 
@@ -54,11 +55,13 @@ In this task, you will install Windows Admin Center on SEA-ADM1. You will downlo
 	}
 	Start-BitsTransfer @parameters
    ```
+
 1. Enter the following command, and then press Enter to install Windows Admin Center:
 	
    ```powershell
    Start-Process -FilePath '.\WindowsAdminCenter.exe' -ArgumentList '/VERYSILENT' -Wait
    ```
+
    ![](media/pscmd.png)
 
    > **Note:** Wait until the installation completes. This should take about 2 minutes.
@@ -73,7 +76,7 @@ In this task, you will use Windows Admin Center to add SEA-DC1 for remote admini
 
     ![](media/AZ-800-l2-1.png)
 
-    >**Note:** If the link does not work, on **SEA-ADM1**, open File Explorer, select Downloads folder, in the Downloads folder select **WindowsAdminCenter.msi** file and install manually. After the install completes, refresh Microsoft Edge.
+    >**Note:** If the link does not work, on **SEA-ADM1**, open File Explorer, select Downloads folder, in the downloads folder select **WindowsAdminCenter.msi** file and install manually. After the install completes, refresh Microsoft Edge.
 
     >**Note:** If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced** on the Edge browser page, at the bottom of page select **Continue to sea-adm1-contoso.com (unsafe)**.
 
@@ -113,6 +116,7 @@ In this task, you will use Windows Admin Center to add SEA-DC1 for remote admini
    > **Note:** While performing step 7, if you see an error message stating, **"You can add this server to your list of connections, but we can't confirm it's available."**, select **Add**.  
 
    - In the **All Connections** pane, select **sea-dc1.contoso.com** **(1)** and then click on **Manage as** **(2)**.  
+
    - In the **Specify your credentials** dialog box:  
      - Ensure that **Use another account for this connection** **(3)** is selected.  
      - Enter the Administrator credentials:  
@@ -173,9 +177,9 @@ In this task, you will verify that remote administration is working correctly th
 
    ![](media/lab3-12-14.png)  
 
-1. On the left pane, below the  **Overview**, select **Settings (1)**.
+1. On the left pane, below the **Overview**, select **Settings (1)**.
 
-1. In the **Settings** section , select **Remote Desktop (2)**.
+1. In the **Settings** section, select **Remote Desktop (2)**.
 
 1. In the **Remote Desktop** section, select the option **Allow remote connections to this computer (3)** checkbox, and then select **Save (4)**.
 
@@ -228,6 +232,7 @@ In this task, you will use PowerShell Remoting to administer SEA-DC1. You will s
    ```powershell
    Start-Service -Name AppIDSvc
    ```
+
 1. From the **[SEA-DC1]** prompt, enter the following command and press Enter to display the status of the Application Identity service (AppIDSvc):
 
    ```powershell
@@ -242,8 +247,10 @@ In this task, you will use PowerShell Remoting to administer SEA-DC1. You will s
 
 After completing this exercise, you will have installed Windows Admin Center and connected it to the servers in your lab environment. You performed a number of remote management tasks including installing a feature as well as enabling and testing Remote Desktop connectivity. Finally, you used PowerShell Remoting to check the status of a service and then to start it.
 
-### Review
+### Summary
+
 In this lab, you have completed:
+
 - Install Windows Admin Center
 - Add servers for remote administration
 - Configure Windows Admin Center extensions
@@ -251,3 +258,5 @@ In this lab, you have completed:
 - Administer servers with Remote PowerShell
 
 ## You have successfully completed this lab.
+
+### Happy Learning!!
