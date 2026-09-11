@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Module 05: Implementing Azure File Sync",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-802-Windows-Server-Administrator-Associate/refs/heads/selfpaced/Instructions/Labs/GettingStarted.md",
+         "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-802-Windows-Server-Administrator-Associate/refs/heads/selfpaced/Instructions/Labs/LAB_05_Implementing_Azure_File_Sync.md",
+        "Order": 2
+      }
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+[
+   {
+    "Name": "Module 08: Monitoring and troubleshooting Windows Server",
+    "Language": "English",
+    "Files": [
+       {
+         "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-802-Windows-Server-Administrator-Associate/refs/heads/selfpaced/Instructions/Labs/GettingStarted.md",
+         "Order": 1
+       },
+       {
+         "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-802-Windows-Server-Administrator-Associate/refs/heads/selfpaced/Instructions/Labs/LAB_08_Monitoring_and_troubleshooting_Windows_Server.md",
+         "Order": 2
+       }
+    ]
+   }
+]
