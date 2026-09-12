@@ -15,7 +15,7 @@ In this lab, you will perform:
 
 ## Architecture Diagram
 
-   ![](media/mod7art.png)  
+   ![](./Media/mod7art.png)  
 
    The architecture diagram highlights the two lab components covered in this module:
 
@@ -31,26 +31,26 @@ In this lab, you will perform:
 
 1. On the **HOSTVM (1)** dropdown menu, select **SEA-ADM1 (2)** to connect to the administrator VM.  
 
-    ![](media/AZ-800-l1-1.png)
+    ![](./Media/AZ-800-l1-1.png)
 
 1. On the **SEA-ADM1** login screen, sign in as **CONTOSO\Administrator** with the password **Pa55w.rd**.  
 
     >**Note:** If copy-paste is not working, please type the password manually.
 
-    ![](media/AZ-800-l1-2.1.png)
+    ![](./Media/AZ-800-l1-2.1.png)
 
 1. On **SEA-ADM1**, start Microsoft Edge, and then browse to `https://SEA-ADM1.contoso.com`.
  
    >**Note:** If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced (2)** on the Edge browser page, at the bottom of page select **Continue to sea-adm1-contoso.com (unsafe) (3)**.
 
-   ![](media/lab7-171.png)
+   ![](./Media/lab7-171.png)
    
 1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK (3)**:
 
    - Username: **CONTOSO\Administrator (1)**
    - Password: **Pa55w.rd (2)**
 
-      ![](media/AZ-800-l5-11.png)
+      ![](./Media/AZ-800-l5-11.png)
 
 1. On **SEA-ADM1**, in the upper-right corner of the Microsoft Edge window displaying Windows Admin Center, select the **Settings (1)** icon (the cog wheel).
 
@@ -58,25 +58,25 @@ In this lab, you will perform:
 
 1. In the details pane, select **Installed extensions (1)** and verify that the list includes the extensions you just installed **DHCP** and **DNS** **(2)**.
 
-    ![](media/lab7-12-2.png)
+    ![](./Media/lab7-12-2.png)
 
 1. If not installed already. Search the **DHCP** and **DNS (2)** extensions under **Available extension (1)** tab, and then select **Install (3)**. The extension will install and Windows Admin Center will refresh.
 
-    ![](media/available-extensions.png)
+    ![](./Media/available-extensions.png)
 
 1. In the **Settings (1)** dropdown select **All connections (2)** option from the list.
 
-   ![](media/all-conn.png)
+   ![](./Media/all-conn.png)
 
 1. In all connections pane, select **+ Add (1)**.
 
-   ![](media/lab7-173.png)
+   ![](./Media/lab7-173.png)
 
 1. In the Add or create resources pane, on the **Servers** tile, select **Add (2)**.
 
 1. In the **Server name** text box, enter **sea-svr6.contoso.com** **(1)** and click on **Add** **(2)**.  
 
-   ![](media/lab7-175.png)  
+   ![](./Media/lab7-175.png)  
 
    > **Note**: While performing step 6, if you see an error message stating, **"You can add this server to your list of connections, but we can't confirm it's available."**, select **Add**.  
 
@@ -90,59 +90,59 @@ In this lab, you will perform:
      - Check the **Use this credential for all connections** checkbox **(6)**.  
      - Click **Continue** **(7)**.  
 
-       ![](media/lab7-174.png)
+       ![](./Media/lab7-174.png)
 
 1. In **All connections** pane, select **sea-svr6.contoso.com (1)** and click on **Connect (2)**.
 
-    ![](media/lab7-12-3.png)
+    ![](./Media/lab7-12-3.png)
 
     > **Note**: If you get any **Connection error** please retry 2-3 times or start from **step-12**.
    
 1. On the **sea-svr6.contoso.com** page, in the **Tools** list, select **Roles & features (1)**. In the Roles and features pane, select the **DHCP Server (2)** checkbox, and then select **+ Install (3)**.
 
-   ![](media/lab7-177.png)
+   ![](./Media/lab7-177.png)
 
 1. In the Install Roles and Features pane, select **Yes**.
 
-   ![](media/lab7-178.png)
+   ![](./Media/lab7-178.png)
 
    > **Note**: Ignore the error message and Wait until the DHCP role state is changed to **Installed**.
 
 1. In the Roles and features page click on **Refresh (1)** and check the DHCP state changes to **Installed (2)**
 
-   ![](media/rf-dhcp-installed.png)
+   ![](./Media/rf-dhcp-installed.png)
 
 1. Refresh the **Microsoft Edge** page back on the **sea-svr6.contoso.com** page, in the **Tools** list, select **DHCP (1)**, and then, in the details pane, select **Install (2)** to install the DHCP PowerShell tools. 
 
-   ![](media/lab7-179.png)
+   ![](./Media/lab7-179.png)
 
     > **Note**: If the **DHCP** entry is not available in the **Tools** list for **sea-svr6.contoso.com**, refresh the **Microsoft Edge** page and try again. Depending on your network performance, it may take upto 5 minutes for the DHCP server to appear.
 
 1. Wait for a notification that the DHCP PowerShell tools are installed. If necessary, select the **Notifications** icon to verify the current status.
 
-    ![](media/lab7-12-4.png)
+    ![](./Media/lab7-12-4.png)
 
 ### Task 2: Authorize the DHCP server
 
 1. On **SEA-ADM1**, select **Start (1)**, and then select **Server Manager (2)**.
 
-   ![](media/start-sm01.png)
+   ![](./Media/start-sm01.png)
 
 1. In **Server Manager**, select **Notifications (1)** in the menu, and then select **Complete DHCP configuration (2)**.
 
-   ![](media/lab7-12-5.png)
+   ![](./Media/lab7-12-5.png)
 
 1. In the **DHCP Post-Install configuration wizard** window, on the **Description** screen, select **Next**.
 
-   ![](media/AZ-800-l7-1.png)
+   ![](./Media/AZ-800-l7-1.png)
 
 1. On the **Authorization** screen, ensure that the **CONTOSO\Administrator (1)** option is selected, and then select **Commit (2)**.
 
-   ![](media/lab7-1712.png)
+   ![](./Media/lab7-1712.png)
 
 1. When you complete both tasks, select **Close**.
 
-   ![](media/lab7-1713.png)
+   ![](./Media/lab7-1713.png)
 
 ### Task 3: Create a scope
 
@@ -152,7 +152,7 @@ In this lab, you will perform:
 
 1. On the **DHCP** page, select **+ New scope**.
 
-   ![](media/AZ-800-l7-2.png)
+   ![](./Media/AZ-800-l7-2.png)
 
 1. In the Create a new scope pane, specify the following settings, and then select **Create (9)**.
 
@@ -164,39 +164,39 @@ In this lab, you will perform:
    - Router (default gateway): select **+ Add (6)** enter **10.100.150.1 (7)**
    - Lease duration for DHCP clients: **4 days (8)**
 
-     ![](media/az800lab7img11.png)
+     ![](./Media/az800lab7img11.png)
 
-     ![](media/az800lab7img12.png)
+     ![](./Media/az800lab7img12.png)
 
 1. On **SEA-ADM1**, switch to **Server Manager**, in **Server Manager**, select **Tools (1)**, and then select **DHCP (2)**.
 
-   ![](media/AZ-800-l7-3.png)
+   ![](./Media/AZ-800-l7-3.png)
 
 1. In the **DHCP** window, in the Actions pane, select **More Actions (1)**, and then select **Manage Authorized Servers (2)**.
 
-    ![](media/AZ-800-l7-4.png)
+    ![](./Media/AZ-800-l7-4.png)
 
 1. In the **Manage Authorized Servers** window, select **Refresh**, ensure that **sea-svr6.contoso.com (1)** appears in the list of authorized DHCP servers, and then **close (2)** the Manage Authorized Servers window.
 
-    ![](media/lab7-1714.png)
+    ![](./Media/lab7-1714.png)
 
 1. In the **DHCP** window, in the Actions pane, select **More Actions (1)**, and then select **Add Server (2)**.
 
-    ![](media/AZ-800-l7-5.png)
+    ![](./Media/AZ-800-l7-5.png)
 
 1. In the **Add Server** dialog box, select **This authorized DHCP server (1)**, select **sea-svr6.contoso.com (2)**, and then select **OK (3)**.
 
-   ![](media/lab7-1716.png)
+   ![](./Media/lab7-1716.png)
 
 1. In the **DHCP** window, expand **sea-svr6(172.16.10.44) (1)**, expand **IPv4 (2)**, expand **Scope [10.100.150.0] ContosoClients (3)**, and then select **Scope Options (4)**.
 
 1. In the Actions pane, select **More Actions (5)**, and then select **Configure Options (6)**.
 
-    ![](media/AZ-800-l7-6.png)
+    ![](./Media/AZ-800-l7-6.png)
 
 1. In the **Scope Options** dialog box, select the **006 DNS Servers (1)** checkbox.
 
-    ![](media/AZ-800-l7-7.png)
+    ![](./Media/AZ-800-l7-7.png)
 
 1. In the **Server name** text box, enter **sea-dc1.contoso.com (2)**, select **Resolve (3)**, verify that the name resolves to **172.16.10.10 (4)**, select **Add (5)**, and then select **OK (6)**.
 
@@ -204,23 +204,23 @@ In this lab, you will perform:
 
 1. On **SEA-ADM1**, in the **DHCP** window, select **IPv4 (1)**, in the Actions pane, select **More Actions (2)**, and then select **Configure Failover (3)**.
 
-    ![](media/AZ-800-l7-8.png)
+    ![](./Media/AZ-800-l7-8.png)
 
 1. In the **Configure Failover** window, verify that the **Select all (1)** checkbox is selected, and then select **Next (2)**.
 
-   ![](media/AZ-800-l7-9.png)
+   ![](./Media/AZ-800-l7-9.png)
 
 1. On the **Specify the partner server to use for failover** screen, select **Add Server**.
 
-   ![](media/az800lab7img18.png)
+   ![](./Media/az800lab7img18.png)
 
 1. In the **Add Server** dialog box, select **This authorized DHCP server (1)**, select **sea-dc1.contoso.com (2)**, and then select **OK (3)**.
 
-    ![](media/AZ-800-l7-10.png)
+    ![](./Media/AZ-800-l7-10.png)
 
 1. Back on the **Specify the partner server to use for failover** screen, ensure that **sea-dc1 (1)** appears in the **Partner Server** drop-down list, and then select **Next (2)**.
 
-    ![](media/AZ-800-l7-11.png)
+    ![](./Media/AZ-800-l7-11.png)
 
 1. On the **Create a new failover relationship** screen, enter the following information, and then select **Next (8)**.
 
@@ -233,137 +233,137 @@ In this lab, you will perform:
    - Enable Message Authentication: **Enabled (6)**
    - Shared Secret: **DHCP-Failover (7)**
 
-     ![](media/AZ-800-l7-12.png)
+     ![](./Media/AZ-800-l7-12.png)
 
 1. Select **Finish**.
 
-     ![](media/AZ-800-l7-13.png)
+     ![](./Media/AZ-800-l7-13.png)
 
 1. In the **Configure Failover** dialog box, select **Close**.
 
-     ![](media/AZ-800-l7-14.png)
+     ![](./Media/AZ-800-l7-14.png)
 
 1. In the **DHCP** window, select **DHCP (1)** and in the Actions pane, select **More Actions (2)**, and then select **Add Server (3)**.
 
-    ![](media/AZ-800-l7-15.png)
+    ![](./Media/AZ-800-l7-15.png)
 
 1. In the **Add Server** dialog box, select **This authorized DHCP server (1)**, select **sea-dc1.contoso.com (2)**, and then select **OK (3)**.
 
-   ![](media/lab7-1724.png)
+   ![](./Media/lab7-1724.png)
 
 1. On **SEA-ADM1**, in the **DHCP** window, expand the **sea-dc1 (1)** node, select **IPv4**, and then verify that two scopes are listed **(2)**.
 
-   ![](media/AZ-800-l7-16.png)
+   ![](./Media/AZ-800-l7-16.png)
 
 1. Select **Scope [172.16.0.0] Contoso (1)**, in the Actions pane, select **More Actions (2)**, and then select **Configure Failover (2)**.
 
-    ![](media/AZ-800-l7-17.png)
+    ![](./Media/AZ-800-l7-17.png)
 
 1. In the **Configure Failover** window, select **Next**.
 
 1. On the **Specify the partner server to use for failover** screen, in the **Partner Server** box, enter **172.16.10.44 (1)**, select the **Reuse existing failover relationships configured with this server (if any exist) (2)** checkbox, and then select **Next (3)**.
 
-    ![](media/AZ-800-l7-18.png)
+    ![](./Media/AZ-800-l7-18.png)
 
     >**Note** If you can't go to next step then click on **Cancel** and you will be in step - 12 again. There select **refresh (2)** option from **More actions (1)**. Then start from step - 12.
     >
-    > ![](media/refresh.png)
+    > ![](./Media/refresh.png)
 
 1. On the **Select from failover relationships which are already configured on this server** screen, select **Next**, and then select **Finish**.
 
-   ![](media/AZ-800-l7-19.png)
+   ![](./Media/AZ-800-l7-19.png)
 
-   ![](media/AZ-800-l7-20.png)
+   ![](./Media/AZ-800-l7-20.png)
 
 1. In the **Configure Failover** dialog box, select **Close**.
 
-   ![](media/AZ-800-l7-21.png)
+   ![](./Media/AZ-800-l7-21.png)
 
 1. Under **sea-svr6 (172.16.10.44)**, select **IPv4**, and then verify that both scopes are listed. If necessary, press the **F5** key to refresh.
 
-   ![](media/scopes.png)
+   ![](./Media/scopes.png)
 
 ### Task 5: Verify DHCP functionality
 
 1. On **SEA-ADM1**, select **Start (1)**, and then select **Settings (2)**.
 
-    ![](media/lab7-12-6.png)
+    ![](./Media/lab7-12-6.png)
 
 1. In the **Settings** window, select **Network & Internet**, and then select **Network and Sharing Center**.
 
-   ![](media/lab7-1730.png)
+   ![](./Media/lab7-1730.png)
 
-   ![](media/lab7-1731.png)
+   ![](./Media/lab7-1731.png)
 
 1. In **Network and Sharing Center**, select **Ethernet (1)**, and then select **Properties (2)**.
 
-    ![](media/AZ-800-l7-22.png)
+    ![](./Media/AZ-800-l7-22.png)
 
 1. In the **Ethernet Properties** dialog box, select **Internet Protocol Version 4 (TCP/IPv4) (1)**, and then select **Properties (2)**.
 
-   ![](media/lab7-1733.png)
+   ![](./Media/lab7-1733.png)
 
 1. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, select **Obtain an IP address automatically (3)**, select **Obtain DNS server address automatically (4)**, and then select **OK (5)**.
 
 1. Select **Close**, and then, in the **Ethernet Status** window, select **Details**.
 
-    ![](media/AZ-800-l7-23.png)
+    ![](./Media/AZ-800-l7-23.png)
 
 1. In the **Network Connection Details** dialog box, verify that DHCP is enabled, an IP address was obtained, and that the **sea-svr6 (172.16.10.44) (1)** DHCP server issued the lease.
 
-   ![](media/lab7-1735.png)
+   ![](./Media/lab7-1735.png)
 
 1. Select **Close (2)** to return to the **Ethernet Status** window.
 
 1. On **SEA-ADM1**, in the **DHCP** window, expand the **172.16.10.44 (1)** node, expand the **IPv4 (2)** node, expand the **Scope [172.16.0.0] Contoso (3)** node, and then select **Address Leases (4)**.
 
-   ![](media/scope-1p.png)
+   ![](./Media/scope-1p.png)
 
    >**Note** If you don't find **Scope [172.16.0.0] Contoso** then click **F5** option to refresh.
 
 1. Verify that there is an entry representing the **SEA-ADM1.contoso.com** lease.
 
-   ![](media/sea-adm1.png)
+   ![](./Media/sea-adm1.png)
 
 1. On **SEA-ADM1**, in the **DHCP** window, expand the **sea-dc1 (1)** node, expand the **IPv4 (2)** node, expand the **Scope [172.16.0.0] Contoso (3)** node, and then select **Address Leases (5)**.
 
-   ![](media/sea-dc1.png)
+   ![](./Media/sea-dc1.png)
 
 1. Verify that here as well there is an entry representing the **SEA-ADM1.contoso.com (5)** lease.
 
 1. Select **sea-svr6(172.16.10.44) (1)**, in the Actions pane, select **More Actions**, select **All tasks (2)**, and then select **Stop (3)**.
 
-    ![](media/AZ-800-l7-24.png)
+    ![](./Media/AZ-800-l7-24.png)
 
 1. On **SEA-ADM1**, switch back to the **Ethernet Status** window, and then select **Disable**.
 
-   ![](media/lab7-1737.png)
+   ![](./Media/lab7-1737.png)
 
 1. Back in the **Network and Sharing Center** window, select **Change adapter settings**, select **Ethernet**, and then select **Enable this network device**.
 
-    ![](media/AZ-800-l7-25.png)
+    ![](./Media/AZ-800-l7-25.png)
 
-    ![](media/lab7-1738.png)
+    ![](./Media/lab7-1738.png)
 
 1. Double-click the enabled **Ethernet** connection to display its status window.
 
 1. In the **Ethernet Status** window, select **Details**.
 
-    ![](media/AZ-800-l7-26.png)
+    ![](./Media/AZ-800-l7-26.png)
 
 1. In the **Network Connection Details** dialog box, verify that DHCP is enabled, an IP address was obtained, and that the **SEA-DC1 (172.16.10.10)** DHCP server issued the lease.
 
-    ![](media/AZ-800-l7-27.png)
+    ![](./Media/AZ-800-l7-27.png)
 
 1. Select **Close** to return to the **Ethernet Status** window.
 
 1. In the **Ethernet Status** window, select **Properties**.
 
-   ![](media/ethernet-properties.png)
+   ![](./Media/ethernet-properties.png)
 
 1. In the **Ethernet Properties** dialog box, select **Internet Protocol Version 4 (TCP/IPv4) (1)**, and then select **Properties (2)**.
 
-    ![](media/AZ-800-l7-28.png)
+    ![](./Media/AZ-800-l7-28.png)
 
 1. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, select **Use the following IP address (1)** and specify the following settings:
 
@@ -373,7 +373,7 @@ In this lab, you will perform:
 
 1. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, select **Use the following DNS server addresses (5)**, set the **Preferred DNS server** to **172.16.10.10 (6)**, and then select **OK (7)**.
 
-    ![](media/AZ-800-l7-29.png)
+    ![](./Media/AZ-800-l7-29.png)
 
    > **Note**: Leave the **Ethernet Status** window open. You will need it later in this lab. 
 
@@ -385,7 +385,7 @@ In this lab, you will perform:
 
 1. In the **Tools** list, select **Roles & features (1)**. In the Roles and features pane, select the **DNS Server (2)** checkbox, and then select **+ Install (3)**.
 
-   ![](media/lab7-1741.png)
+   ![](./Media/lab7-1741.png)
 
 1. In the Install Roles and Features pane, select **Yes (4)**.
 
@@ -393,13 +393,13 @@ In this lab, you will perform:
 
 1. Refresh the **Microsoft Edge** page, back on the **sea-svr1.contoso.com** page, in the **Tools** list, select **DNS (1)**, and then on the details pane, select **Install (2)** to install the DNS PowerShell tools. 
 
-   ![](media/lab7-1742.png)
+   ![](./Media/lab7-1742.png)
 
    > **Note**: If the **DNS** entry is not available in the **Tools** list for **sea-svr6.contoso.com**, refresh the **Microsoft Edge** page and try again.
 
 1. Wait until a notification appears indicating that the DNS PowerShell tools are installed. If necessary, select the **Notifications (1)** icon to verify the **current status (2)**.
 
-   ![](media/dns-notification.png)
+   ![](./Media/dns-notification.png)
 
    >**Note**: If prompted **DNS powershell tools are not installed**, click on **install**.
 
@@ -415,7 +415,7 @@ In this lab, you will perform:
    - Zone file name: **TreyResearch.net.dns (5)**
    - Dynamic update: **Do not allow dynamic update (6)**
 
-     ![](media/AZ-800-l7-30.png)
+     ![](./Media/AZ-800-l7-30.png)
 
      > **Note**: If Error occurs just retry the step again. 
 
@@ -428,13 +428,13 @@ In this lab, you will perform:
    - IP address: **172.30.99.234 (5)**
    - Time to live: **600 (6)**
 
-     ![](media/AZ-800-l7-31.png)
+     ![](./Media/AZ-800-l7-31.png)
 
 1. After copying the commands, please use **Shift + Insert** to paste them into the Command Prompt in the upcoming steps.
 
 1. On **SEA-ADM1**, select **Start (1)**, and then select **Windows PowerShell (2)**.
 
-    ![](media/win-shell.png)
+    ![](./Media/win-shell.png)
 
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to validate that the new DNS record provides the name resolution:
 
@@ -442,7 +442,7 @@ In this lab, you will perform:
    Resolve-DnsName -Server sea-svr6.contoso.com -Name testapp.treyresearch.net
    ```
 
-   ![](media/lab7-1745.png)
+   ![](./Media/lab7-1745.png)
 
 ### Task 3: Configure forwarding
 
@@ -450,33 +450,33 @@ In this lab, you will perform:
 
 1. In Server Manager, select **Tools (1)**, and then select **DNS (2)**.
 
-   ![](media/AZ-800-l7-33.png)
+   ![](./Media/AZ-800-l7-33.png)
 
 1. In the **Connect to DNS Server** dialog box, select **The following computer (1)**, enter **SEA-SVR6.contoso.com (2)**, and then select **OK (3)**.
 
-    ![](media/AZ-800-l7-34.png)
+    ![](./Media/AZ-800-l7-34.png)
 
 1. In **DNS Manager**, select **SEA-SVR6.contoso.com (1)**, display its context-sensitive menu, right click and select **Properties (2)**.
 
-    ![](media/AZ-800-l7-35.png)
+    ![](./Media/AZ-800-l7-35.png)
 
 1. In the **SEA-SVR6.contoso.com Properties** dialog box, select the **Forwarders (1)** tab, and then select **Edit (2)**.
 
-   ![](media/lab7-12-7.png)
+   ![](./Media/lab7-12-7.png)
 
 1. In the **Edit Forwarders** dialog box, in the **IP addresses for forwarding servers** box, enter **131.107.0.100 (1)**, and then select **OK (2)**.
 
-    ![](media/AZ-800-l7-36.png)
+    ![](./Media/AZ-800-l7-36.png)
 
 1. In the **SEA-SVR6.contoso.com Properties** dialog box, select **OK**.
 
-    ![](media/save.png)
+    ![](./Media/save.png)
 
 ### Task 4: Configure conditional forwarding
 
 1. On **SEA-ADM1**, in **DNS Manager**, expand **SEA-SVR6.contoso.com (1)**, and then select **Conditional Forwarders (2)**.
 
-   ![](media/lab7-1751.png)
+   ![](./Media/lab7-1751.png)
 
 1. Select **Conditional Forwarders**, display its context-sensitive menu, and then, in the menu, right click and select **New Conditional Forwarder (3)**.
 
@@ -484,7 +484,7 @@ In this lab, you will perform:
 
 1. In the **IP addresses of the master servers** box, enter **172.16.10.10 (2)**, and then select **Enter**.
 
-    ![](media/AZ-800-l7-37.png)
+    ![](./Media/AZ-800-l7-37.png)
 
     > **Note**: Disregard the message **An unknown error occurred** in the validation column within the **New Conditional Forwarder** dialog box.
 
@@ -498,7 +498,7 @@ In this lab, you will perform:
    Resolve-DnsName -Server sea-svr6.contoso.com -Name sea-dc1.contoso.com
    ```
    
-   ![](media/lab7-12-8.png)
+   ![](./Media/lab7-12-8.png)
 
 ### Task 5: Configure DNS policies
 
@@ -530,7 +530,7 @@ In this lab, you will perform:
    Add-DnsServerQueryResolutionPolicy -Name 'HeadOfficePolicy' -Action ALLOW -ClientSubnet 'eq,HeadOfficeSubnet' -ZoneScope 'HeadOfficeScope,1' -ZoneName 'TreyResearch.net'
    ```
 
-    ![](media/lab7-12-9.png)
+    ![](./Media/lab7-12-9.png)
 
 ### Task 6: Verify DNS policy functionality
 
@@ -548,7 +548,7 @@ In this lab, you will perform:
 
    > **Note**: Verify that the name resolves to the IP address **172.30.99.100** that was configured in the **HeadOfficePolicy**.
 
-   ![](media/lab7-12-10.png)
+   ![](./Media/lab7-12-10.png)
 
 1. On **SEA-ADM1**, switch back to the **Ethernet Status**.
 
@@ -556,11 +556,11 @@ In this lab, you will perform:
 
 1. In the **Ethernet Properties** dialog box, select **Internet Protocol Version 4 (TCP/IPv4) (1)**, and then select **Properties (2)**.
 
-    ![](media/AZ-800-l7-28.png)
+    ![](./Media/AZ-800-l7-28.png)
 
 1. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, change the currently assigned IP address (**172.16.10.11**) to an IP address **172.16.11.11** **(1)** that is not within the IP address range of the **HeadOfficeSubnet**, and then select **OK** **(2)**.
 
-   ![](media/AZ-800-l7-38.png)
+   ![](./Media/AZ-800-l7-38.png)
 
 1. On **SEA-ADM1**, switch to the **Windows PowerShell** console.
 
@@ -570,7 +570,7 @@ In this lab, you will perform:
    Resolve-DnsName -Server sea-svr6.contoso.com -Name testapp.treyresearch.net
    ```
 
-   ![](media/lab7-12-11.png)
+   ![](./Media/lab7-12-11.png)
 
    > **Note**: Verify that the name resolves to **172.30.99.234**. This is expected, because the IP address of **SEA-ADM1** is no longer within the **HeadOfficeSubnet**. DNS queries originating from the **HeadOfficeSubnet** of **(172.16.10.0/24)** targeting `testapp.treyresearch.net` resolve to **172.30.99.100**. DNS queries from outside of this subnet targeting `testapp.treyresearch.net` resolve to **172.30.99.234**.
 
@@ -580,11 +580,11 @@ In this lab, you will perform:
 
 1. In the **Ethernet Properties** dialog box, select **Internet Protocol Version 4 (TCP/IPv4) (1)**, and then select **Properties (2)**.
 
-    ![](media/AZ-800-l7-28.png)
+    ![](./Media/AZ-800-l7-28.png)
 
 1. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, change the currently assigned IP address (**172.16.11.11**) to its original value (**172.16.10.11**) **(1)** and select **OK (2)**.
 
-    ![](media/AZ-800-l7-39.png)
+    ![](./Media/AZ-800-l7-39.png)
 
 1. Select **Close** twice.
 

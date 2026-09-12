@@ -32,7 +32,7 @@ In this task, you will enable Windows Defender Credential Guard using Group Poli
 
      >**NOTE:** If you are unable to see drop-down menu to select VMs, please wait for 3-5 minutes, refresh the lab page and check again.
 
-    ![](./media/azm2-1.png)
+    ![](./Media/azm2-1.png)
 
 1. In the **Type here to search** text box next to the **Start** button, enter **Group Policy Management (1)** in the list of results, select **Group Policy Management (2)**.
 
