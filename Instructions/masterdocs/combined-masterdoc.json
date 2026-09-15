@@ -1,0 +1,44 @@
+[
+  {
+    "Name": "AZ-802-Combined-Guide",
+    "Language": "English",
+    "Files": [
+       {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-802-Windows-Server-Administrator-Associate/refs/heads/selfpaced/Instructions/Labs/GettingStarted.md",
+         "Order": 1
+       },
+       {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-802-Windows-Server-Administrator-Associate/refs/heads/selfpaced/Instructions/Labs/LAB_01_Implementing_identity_services_and_Group_Policy.md",
+         "Order": 2
+       },
+       {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-802-Windows-Server-Administrator-Associate/refs/heads/selfpaced/Instructions/Labs/LAB_02_Managing_Windows_Server.md",
+         "Order": 3
+       },
+       {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-802-Windows-Server-Administrator-Associate/refs/heads/selfpaced/Instructions/Labs/LAB_03_Implementing_and_configuring_virtualization_in_Windows_Server.md",
+         "Order": 4
+       },
+       {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-802-Windows-Server-Administrator-Associate/refs/heads/selfpaced/Instructions/Labs/LAB_04_Implementing_and_configuring_network_infrastructure_services_in_Windows_Server.md",
+         "Order": 5
+       },
+       {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-802-Windows-Server-Administrator-Associate/refs/heads/selfpaced/Instructions/Labs/LAB_05_Implementing_Azure_File_Sync.md",
+         "Order": 6
+       },
+       {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-802-Windows-Server-Administrator-Associate/refs/heads/selfpaced/Instructions/Labs/LAB_06_Implementing_storage_solutions_in_Windows_Server.md",
+         "Order": 7
+       },   
+       {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-802-Windows-Server-Administrator-Associate/refs/heads/selfpaced/Instructions/Labs/LAB_07_Configuring_security_in_Windows_Server.md",
+         "Order": 8
+       },
+       {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-802-Windows-Server-Administrator-Associate/refs/heads/selfpaced/Instructions/Labs/LAB_08_Monitoring_and_troubleshooting_Windows_Server.md",
+         "Order": 9
+       }                                           
+    ]
+  }
+]
